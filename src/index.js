@@ -13,7 +13,7 @@ app.use(express.json());
 
 RouterApi(app);
 
-const port = 5930 || process.env.NODE_PORT_APLICATION;  
+const port = process.env.NODE_PORT_APLICATION || 8520;  
 
 const startServer = async () => {
    await connectDataBase()

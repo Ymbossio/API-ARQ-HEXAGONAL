@@ -12,17 +12,6 @@ export const createUser = async (req, res) => {
     }
 }
 
-
-export const loginuser = async (req, res) => {
-    try {
-        const response = await service.create(req.body)
-        res.json({success: true, data: response})      
-    } catch (error) {  
-        res.status(500).json({success: false, message: error.message})
-    }
-}
-
-
 export const getAllUsers = async (req, res) => {
     try {
         const response = await service.find()
