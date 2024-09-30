@@ -2,7 +2,21 @@
 Está es una API de Usuarios permite gestionar la información de usuarios en una aplicación web. Proporciona endpoints para crear, leer, actualizar y eliminar usuarios (CRUD). 
 Esta API está diseñada para ser sencilla y eficiente, facilitando la integración con diversas aplicaciones.
 
-puede visitarla accediendo al siguiente link: https://api-clean-arq.onrender.com/v1/users
+puede visitarla accediendo al siguiente link: https://api-clean-arq.onrender.com/
+
+
+# Despligue de la aplicación
+La aplicación está desplegada en Render, un servicio de infraestructura en la nube que simplifica la implementación de aplicaciones web. Render ofrece escalabilidad automática, despliegue continuo y una experiencia de usuario intuitiva.
+<br> <br>
+https://api-clean-arq.onrender.com/
+
+# Las tecnologías utilizadas
+<ul>
+  <li>Nodejs</li>
+  <li>Express</li>
+  <li>Sequelize</li>
+  <li>Docker</li>
+</ul>
 
 # Instrucciones para ejecutar la aplicación localmente 
 
