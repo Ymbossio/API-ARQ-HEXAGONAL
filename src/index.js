@@ -20,6 +20,11 @@ const startServer = async () => {
    app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`);
    });
+
+   app.get('/', (req, res)=>{
+      res.send('<h1>This server Run 🚀</h1>');
+    })
+
 };
 
 
