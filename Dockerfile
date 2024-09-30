@@ -10,29 +10,17 @@ WORKDIR /app
 # Establecer el entorno de producción
 ENV NODE_ENV=production
 
-# Etapa de construcción para reducir el tamaño de la imagen final
-FROM base as dist
-
 # Copiar los archivos de configuración de la aplicación
 COPY package*.json ./
 
-# Instalar las dependencias de desarrollo
-RUN npm install --production=false
+# Instalar las dependencias
+RUN npm install --production
 
 # Copiar el código de la aplicación
 COPY . .
 
-# Construir la aplicación
-RUN npm run build
+# Exponer el puerto que utiliza tu aplicación
+EXPOSE 8021
 
-# Eliminar las dependencias de desarrollo
-RUN npm prune --production
-
-# Etapa final para la imagen de la aplicación
-FROM base
-
-# Copiar la aplicación construida
-COPY --from=dist /app /app
-
-# Iniciar el servidor por defecto, esto puede ser sobrescrito en tiempo de ejecución
-CMD [ "npm", "run", "start" ]
+# Iniciar el servidor
+CMD ["npm", "start"]
