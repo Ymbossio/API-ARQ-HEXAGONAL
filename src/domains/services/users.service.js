@@ -1,4 +1,4 @@
-import UsuariosRepository from '../repositories/users.Repository.js';
+import UsuariosRepository from '../repositories/users.repository.js';
 
 class UsuariosServices {
 
