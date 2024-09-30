@@ -24,7 +24,7 @@ const connectDataBase =  async () => {
 
     } catch (error) {
 
-        console.error('No se pudo conectar a la base de datos:', err);
+        console.error('No se pudo conectar a la base de datos:', error);
         process.exit(1);
     
     }
